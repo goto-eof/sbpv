@@ -14,6 +14,8 @@ starting from a Swing Java application.
 
 # Build snap file
 
+From the project root directory execute the following statements:
+
 ```bash
 # remove old snap file
 sudo rm sbpv_2.0.0_amd64.snap;

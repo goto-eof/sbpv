@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Simple Battery Percentage Viewer
+Comment=Simple battery percentage viewer
+Exec=sbpv
+Icon=${SNAP}/meta/gui/icon.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Keywords=notes;
+Categories=Office

@@ -1,0 +1,40 @@
+name: sbpv
+version: '2.0.0'
+summary: Simple Battery Percentage Viewer
+description: |
+  Simple Battery Percentage Viewer
+
+grade: stable
+confinement: strict
+base: core22
+
+title: SBPV
+website: https://andre-i.eu
+issues: https://github.com/goto-eof
+license: MIT
+
+compression: xz
+
+apps:
+  sbpv:
+    command: executor
+    plugs: [ upower-observe ]
+
+parts:
+  wrapper:
+    plugin: dump
+    source: snap/local
+    source-type: local
+
+  sbbpv:
+    plugin: maven
+    source: .
+    build-packages:
+      - maven
+      - openjdk-11-jdk
+    stage-packages:
+      - upower
+      - openjdk-11-jre
+    override-prime: |
+      snapcraftctl prime
+      rm -vf usr/lib/jvm/java-11-openjdk/lib/security/blacklisted.certs

@@ -2,7 +2,7 @@ package com.andreidodu.sbpv;
 
 import com.andreidodu.sbpv.constants.LabelConst;
 import com.andreidodu.sbpv.util.CommandUtil;
-import com.andreidodu.sbpv.util.TimUtil;
+import com.andreidodu.sbpv.util.TimeUtil;
 import com.andreidodu.sbpv.util.WindowUtil;
 
 import javax.swing.*;
@@ -58,8 +58,8 @@ class Main {
             lastRecordDateTime = Optional.of(LocalDateTime.now());
         }
         lastRecordDateTime.ifPresent(dateTime -> {
-            long seconds = TimUtil.calculateTimeElapsedInSeconds(dateTime);
-            String timeElapsed = TimUtil.secondsToHumanableString(seconds);
+            long seconds = TimeUtil.calculateTimeElapsedInSeconds(dateTime);
+            String timeElapsed = TimeUtil.secondsToHumanableString(seconds);
             labelTime.setText(String.format(LabelConst.TIME_LABEL_PATTERN, timeElapsed));
         });
     }

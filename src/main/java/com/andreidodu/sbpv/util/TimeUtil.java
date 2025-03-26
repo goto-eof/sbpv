@@ -3,7 +3,7 @@ package com.andreidodu.sbpv.util;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class TimUtil {
+public class TimeUtil {
 
     public static final String TIME_HUMANABLE_PATTERN = "%d:%02d:%02d";
 

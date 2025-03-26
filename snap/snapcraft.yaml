@@ -18,7 +18,7 @@ compression: xz
 apps:
   sbpv:
     command: executor
-    plugs: [ upower-observe ]
+    plugs: [ upower-observe, network, x11, browser-support, unity7, home, desktop, desktop-legacy, removable-media, wayland ]
 
 parts:
   wrapper:

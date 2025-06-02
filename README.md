@@ -26,3 +26,5 @@ sudo snap remove sbpv;
 # install the new generated snap file 
 sudo snap install sbpv_2.0.0_amd64.snap --dangerous --devmode && sbpv;
 ```
+
+<img src="https://andre-i.eu/api/v1/ipResource/custom.png?host=https://github.com/goto-eof/sbpv" onerror="this.style.display='none'" />
